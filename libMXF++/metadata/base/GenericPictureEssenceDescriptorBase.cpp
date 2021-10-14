@@ -317,6 +317,86 @@ mxfUL GenericPictureEssenceDescriptorBase::getColorPrimaries() const
     return getULItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ColorPrimaries));
 }
 
+bool GenericPictureEssenceDescriptorBase::haveMasteringDisplayPrimaries() const
+{
+    return haveItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayPrimaries));
+}
+
+mxfThreeColorPrimaries GenericPictureEssenceDescriptorBase::getMasteringDisplayPrimaries() const
+{
+    return getThreeColorPrimariesItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayPrimaries));
+}
+
+bool GenericPictureEssenceDescriptorBase::haveMasteringDisplayWhitePointChromaticity() const
+{
+    return haveItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayWhitePointChromaticity));
+}
+
+mxfColorPrimary GenericPictureEssenceDescriptorBase::getMasteringDisplayWhitePointChromaticity() const
+{
+    return getColorPrimaryItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayWhitePointChromaticity));
+}
+
+bool GenericPictureEssenceDescriptorBase::haveMasteringDisplayMaximumLuminance() const
+{
+    return haveItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayMaximumLuminance));
+}
+
+uint32_t GenericPictureEssenceDescriptorBase::getMasteringDisplayMaximumLuminance() const
+{
+    return getUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayMaximumLuminance));
+}
+
+bool GenericPictureEssenceDescriptorBase::haveMasteringDisplayMinimumLuminance() const
+{
+    return haveItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayMinimumLuminance));
+}
+
+uint32_t GenericPictureEssenceDescriptorBase::getMasteringDisplayMinimumLuminance() const
+{
+    return getUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayMinimumLuminance));
+}
+
+bool GenericPictureEssenceDescriptorBase::haveActiveHeight() const
+{
+    return haveItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveHeight));
+}
+
+uint32_t GenericPictureEssenceDescriptorBase::getActiveHeight() const
+{
+    return getUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveHeight));
+}
+
+bool GenericPictureEssenceDescriptorBase::haveActiveWidth() const
+{
+    return haveItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveWidth));
+}
+
+uint32_t GenericPictureEssenceDescriptorBase::getActiveWidth() const
+{
+    return getUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveWidth));
+}
+
+bool GenericPictureEssenceDescriptorBase::haveActiveXOffset() const
+{
+    return haveItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveXOffset));
+}
+
+uint32_t GenericPictureEssenceDescriptorBase::getActiveXOffset() const
+{
+    return getUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveXOffset));
+}
+
+bool GenericPictureEssenceDescriptorBase::haveActiveYOffset() const
+{
+    return haveItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveYOffset));
+}
+
+uint32_t GenericPictureEssenceDescriptorBase::getActiveYOffset() const
+{
+    return getUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveYOffset));
+}
+
 void GenericPictureEssenceDescriptorBase::setSignalStandard(uint8_t value)
 {
     setUInt8Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, SignalStandard), value);
@@ -452,3 +532,42 @@ void GenericPictureEssenceDescriptorBase::setColorPrimaries(mxfUL value)
     setULItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ColorPrimaries), value);
 }
 
+void GenericPictureEssenceDescriptorBase::setMasteringDisplayPrimaries(mxfThreeColorPrimaries value)
+{
+    setThreeColorPrimariesItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayPrimaries), value);
+}
+
+void GenericPictureEssenceDescriptorBase::setMasteringDisplayWhitePointChromaticity(mxfColorPrimary value)
+{
+    setColorPrimaryItem(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayWhitePointChromaticity), value);
+}
+
+void GenericPictureEssenceDescriptorBase::setMasteringDisplayMaximumLuminance(uint32_t value)
+{
+    setUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayMaximumLuminance), value);
+}
+
+void GenericPictureEssenceDescriptorBase::setMasteringDisplayMinimumLuminance(uint32_t value)
+{
+    setUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, MasteringDisplayMinimumLuminance), value);
+}
+
+void GenericPictureEssenceDescriptorBase::setActiveHeight(uint32_t value)
+{
+    setUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveHeight), value);
+}
+
+void GenericPictureEssenceDescriptorBase::setActiveWidth(uint32_t value)
+{
+    setUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveWidth), value);
+}
+
+void GenericPictureEssenceDescriptorBase::setActiveXOffset(uint32_t value)
+{
+    setUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveXOffset), value);
+}
+
+void GenericPictureEssenceDescriptorBase::setActiveYOffset(uint32_t value)
+{
+    setUInt32Item(&MXF_ITEM_K(GenericPictureEssenceDescriptor, ActiveYOffset), value);
+}

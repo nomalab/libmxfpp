@@ -106,6 +106,22 @@ public:
    mxfUL getCodingEquations() const;
    bool haveColorPrimaries() const;
    mxfUL getColorPrimaries() const;
+   bool haveMasteringDisplayPrimaries() const;
+   mxfThreeColorPrimaries getMasteringDisplayPrimaries() const;
+   bool haveMasteringDisplayWhitePointChromaticity() const;
+   mxfColorPrimary getMasteringDisplayWhitePointChromaticity() const;
+   bool haveMasteringDisplayMaximumLuminance() const;
+   uint32_t getMasteringDisplayMaximumLuminance() const;
+   bool haveMasteringDisplayMinimumLuminance() const;
+   uint32_t getMasteringDisplayMinimumLuminance() const;
+   bool haveActiveHeight() const;
+   uint32_t getActiveHeight() const;
+   bool haveActiveWidth() const;
+   uint32_t getActiveWidth() const;
+   bool haveActiveXOffset() const;
+   uint32_t getActiveXOffset() const;
+   bool haveActiveYOffset() const;
+   uint32_t getActiveYOffset() const;
 
 
    // setters
@@ -137,6 +153,14 @@ public:
    void setPictureEssenceCoding(mxfUL value);
    void setCodingEquations(mxfUL value);
    void setColorPrimaries(mxfUL value);
+   void setMasteringDisplayPrimaries(mxfThreeColorPrimaries value);
+   void setMasteringDisplayWhitePointChromaticity(mxfColorPrimary value);
+   void setMasteringDisplayMaximumLuminance(uint32_t value);
+   void setMasteringDisplayMinimumLuminance(uint32_t value);
+   void setActiveHeight(uint32_t value);
+   void setActiveWidth(uint32_t value);
+   void setActiveXOffset(uint32_t value);
+   void setActiveYOffset(uint32_t value);
 
 
 protected:

@@ -9,6 +9,8 @@ libmetadata_la_SOURCES = \
 	AVCSubDescriptor.cpp \
 	CDCIEssenceDescriptor.cpp \
 	ContentStorage.cpp \
+	DCTimedTextDescriptor.cpp \
+	DCTimedTextResourceSubDescriptor.cpp \
 	DMFramework.cpp \
 	DMSegment.cpp \
 	DMSet.cpp \
@@ -26,6 +28,7 @@ libmetadata_la_SOURCES = \
 	GroupOfSoundfieldGroupsLabelSubDescriptor.cpp \
 	Identification.cpp \
 	InterchangeObject.cpp \
+	JPEG2000SubDescriptor.cpp \
 	Locator.cpp \
 	MaterialPackage.cpp \
 	MCALabelSubDescriptor.cpp \
@@ -65,6 +68,8 @@ library_include_HEADERS = \
 	AVCSubDescriptor.h \
 	CDCIEssenceDescriptor.h \
 	ContentStorage.h \
+	DCTimedTextDescriptor.h \
+	DCTimedTextResourceSubDescriptor.h \
 	DMFramework.h \
 	DMSegment.h \
 	DMSet.h \
@@ -83,6 +88,7 @@ library_include_HEADERS = \
 	Identification.h \
 	InterchangeObject.h \
 	Locator.h \
+	JPEG2000SubDescriptor.h \
 	MaterialPackage.h \
 	Metadata.h \
 	MCALabelSubDescriptor.h \
